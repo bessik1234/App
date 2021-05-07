@@ -1,10 +1,8 @@
 import React from 'react';
-import Item from '../Item/Item';
 
-const ItemList = () => (<ul>
-    <li><Item /></li>
-    <li><Item /></li>
-    <li><Item /></li>
-</ul>);
+
+const ItemList = ({doneItem}) => (
+    <div>Выполнено дел:  {doneItem}</div>
+);
 
 export default ItemList;

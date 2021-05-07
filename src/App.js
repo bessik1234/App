@@ -1,13 +1,16 @@
 import React from 'react';
+import InputItem from './components/InputItem/InputItem';
+import ItemList from './components/ItemList/ItemList';
+import Footer from './components/Footer/Footer';
 
-const ItemList = () => (<ul>
-  <li>1</li>
-  <li>2</li>
-</ul>)
+let todoItem = ['Написать новое приложение','Доделать домашку','сдать реакт'];
 
 const App = () => (<div>
-  <h1>Hello World!</h1>
-  <ItemList />
+  <h1>Важные дела:</h1>
+  <InputItem todoItem={todoItem} />
+  <ItemList doneItem={1}/>
+  <Footer count={3} />
+  
 </div>)
 
 export default App;
