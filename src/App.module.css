@@ -2,6 +2,7 @@
     width: 300px;
     margin: auto;
 }
-.wrap__title{
+.title{
+    color: rebeccapurple;
 font-family: helvetica;
 }
