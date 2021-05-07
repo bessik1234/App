@@ -3,19 +3,23 @@ import InputItem from './components/InputItem/InputItem';
 import ItemList from './components/ItemList/ItemList';
 import Footer from './components/Footer/Footer';
 import styles from './App.module.css';
+import { isDOMComponent } from 'react-dom/test-utils';
 
 const App = () => {
  
   const items = [
 
     {
-        value: 'Написать новое приложение'
+        value: 'Написать новое приложение',
+        isDone: true
     }, 
     { 
-        value: 'выучить пропсы'
+        value: 'выучить пропсы',
+        isDone: true
      },
     {
-        value: 'Доделать домашнее задани'
+        value: 'Доделать домашнее заданиe',
+        isDone: false
     }
 
 ];
