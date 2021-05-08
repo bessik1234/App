@@ -6,32 +6,38 @@ import styles from './App.module.css';
 import { isDOMComponent } from 'react-dom/test-utils';
 
 
-const App = () => {
+class App extends React.Component {
+  render() {
+    const items = [
+
+      {
+          value: 'Написать новое приложение',
+          isDone: true
+      }, 
+      { 
+          value: 'выучить пропсы',
+          isDone: true
+       },
+      {
+          value: 'Доделать домашнее заданиe',
+          isDone: false
+      }
+  
+  ];
+
+    return(<div className={styles.wrap}>
+    <h1 className={styles.title}> Важные дела: </h1>
+    <Input />
+    <InputItem items={items} />
+    
+    <Footer count={3} />
+    
+  </div>)
+  }
+
+  }
+
+
+
  
-  const items = [
-
-    {
-        value: 'Написать новое приложение',
-        isDone: true
-    }, 
-    { 
-        value: 'выучить пропсы',
-        isDone: true
-     },
-    {
-        value: 'Доделать домашнее заданиe',
-        isDone: false
-    }
-
-];
-  return(
-  <div className={styles.wrap}>
-  <h1 className={styles.title}> Важные дела: </h1>
-  <Input />
-  <InputItem items={items} />
-  
-  <Footer count={3} />
-  
-</div>)
-}
 export default App;
