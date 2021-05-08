@@ -1,0 +1,12 @@
+.item {
+    color: tomato;
+}
+
+.done {
+    color: #c4c4c4;
+}
+
+.item{
+   
+    list-style-type: none;
+ }
