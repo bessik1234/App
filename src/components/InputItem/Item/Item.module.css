@@ -1,0 +1,9 @@
+.item{
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+}
+.done{
+    text-decoration: line-through;
+	text-decoration-color: red;
+    margin-top: 10px;
+}
