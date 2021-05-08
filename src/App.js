@@ -1,45 +1,43 @@
-import React from 'react';
-import InputItem from './components/InputItem/InputItem';
-import Footer from './components/Footer/Footer';
-import Input from './components/Input/Input';
+import React from "react";
 import styles from './App.module.css';
-import { isDOMComponent } from 'react-dom/test-utils';
-
+import InputItem from "./Components/InputItem/InputItem";
+import ItemList from "./Components/ItemList/ItemList";
+import Footer from "./Components/Footer/Footer"; 
 
 class App extends React.Component {
-  state={
-    items: [
+    state = {
+            items: [
+                {
+                    value: 'Доделать домашку',
+                    isDone: true
+                },
+                {
+                    value: 'Отправить домашку',
+                    isDone: false
+                },
+                {
+                    value: 'Прибраться в папках',
+                    isDone: true
+                }]
+        };
 
-      {
-          value: 'Написать новое приложение',
-          isDone: true
-      }, 
-      { 
-          value: 'выучить пропсы',
-          isDone: true
-       },
-      {
-          value: 'Доделать домашнее заданиe',
-          isDone: false
-      }
-  
-  ]
-  };
-
-  render() {
-       return(<div className={styles.wrap}>
-    <h1 className={styles.title}> Важные дела: </h1>
-    <Input />
-    <InputItem items={this.state.items} />
-    
-    <Footer count={3} />
-    
-  </div>)
-  }
-
-  }
+    onClickDone = (isDone) => console.log(isDone);
 
 
+    render() {
+        document.body.style.margin = '0';
 
- 
+        return (
+            <div className={styles.wrap}>
+                <div className={styles.main}>
+                    <h1 className={styles.title}>Наш список дел:</h1>
+                    <InputItem/>
+                    <ItemList items={this.state.items} onClickDone={this.onClickDone} />
+                    <Footer taskCount={6} />
+                </div>
+            </div>);
+    }
+}
+
+
 export default App;

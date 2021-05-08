@@ -1,4 +1,5 @@
-.wrap{
-    margin-top: 40px;
-    color: rgb(138, 133, 133);
+.tasks {
+    color: #c4c4c4;
+    font-style: italic;
+    margin: 50px 20px;
 }

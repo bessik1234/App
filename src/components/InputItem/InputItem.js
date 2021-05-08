@@ -1,18 +1,21 @@
-import React from 'react';
-import Item from './Item/Item';
-import styles from './InputItem.module.css';
-import Box from './Box/Box';
-import Icon from './Icon/Icon';
+import React from "react";
+import TextField from '@material-ui/core/TextField';
+import styles from './InputItem.module.css'
 
 
-const InputItem = ({items}) => (<div className={styles.wrap}>
-    <ul>
-    {items.map(item => <li key={item.value} className={styles.item}>
-        <Box/>
-        <Item value={item.value} isDone={item.isDone}/>
-        <Icon/>
-        </li>)} 
-       
-</ul></div>);
+const InputItem = () => (
+    <div className={styles.wrap}>
+            <TextField
+                id="standard-with-placeholder"
+                label="Добавим?"
+                placeholder="Напиши, забудешь!"
+                margin="normal"
+                fullWidth
+                variant="outlined"
 
-export default InputItem;
+            />
+    </div>
+        );
+
+
+export default InputItem
