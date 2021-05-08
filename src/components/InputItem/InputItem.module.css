@@ -1,0 +1,12 @@
+.item{
+   display: flex;
+   justify-content: space-between;
+   align-self: center;
+   margin-top: 30px;
+   list-style-type: none;
+}
+
+.wrap{
+  
+
+}
