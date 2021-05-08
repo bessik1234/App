@@ -1,8 +1,16 @@
 .wrap{
-    width: 300px;
-    margin: auto;
+    padding: 30px;
+  
+    width: 500px;
+
+    margin: 50px   auto;
+    -webkit-box-shadow: 0px 0px 82px 60px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 82px 60px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 82px 60px rgba(34, 60, 80, 0.2);
+    border-radius: 10px;
 }
 .title{
+    text-align: center;
     color: rebeccapurple;
-font-family: helvetica;
+    font-family: helvetica;
 }
