@@ -7,8 +7,8 @@ import { isDOMComponent } from 'react-dom/test-utils';
 
 
 class App extends React.Component {
-  render() {
-    const items = [
+  state={
+    items: [
 
       {
           value: 'Написать новое приложение',
@@ -23,12 +23,14 @@ class App extends React.Component {
           isDone: false
       }
   
-  ];
+  ]
+  };
 
-    return(<div className={styles.wrap}>
+  render() {
+       return(<div className={styles.wrap}>
     <h1 className={styles.title}> Важные дела: </h1>
     <Input />
-    <InputItem items={items} />
+    <InputItem items={this.state.items} />
     
     <Footer count={3} />
     
