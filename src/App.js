@@ -83,7 +83,7 @@ class App extends React.Component {
                     <ItemList items={this.state.items} 
                     onClickDone={this.onClickDone} 
                     onClickDelete={this.onClickDelete}  />
-                    <Footer count={this.state.count} />
+                    <Footer  />
                 </div>
             </div>);
     }

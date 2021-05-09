@@ -32,4 +32,8 @@ const Item = ({value, isDone, id, onClickDone, onClickDelete}) => (
     </ListItem>
 );
 
+Item.defaultProps = {
+    isDone: false
+};
+
 export default Item;
