@@ -1,8 +1,8 @@
 import React from "react";
 import styles from './Footer.module.css'
 
-const Footer = ( { taskCount }) => (
-    <div className={styles.tasks}> Осталось выполнить: {taskCount} дел</div>
+const Footer = ( { count, onClickFooter }) => (
+    <div className={styles.tasks} onClick={onClickFooter}> Осталось выполнить: {count} дел</div>
 );
 
 export default Footer
