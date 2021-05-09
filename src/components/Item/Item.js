@@ -7,7 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
-
+import PropTypes from 'prop-types';
 
 const Item = ({value, isDone, id, onClickDone, onClickDelete}) => (
     <ListItem className={
@@ -35,5 +35,8 @@ const Item = ({value, isDone, id, onClickDone, onClickDelete}) => (
 Item.defaultProps = {
     isDone: false
 };
+Item.propTypes = {
 
+    count: PropTypes.bool
+};
 export default Item;
