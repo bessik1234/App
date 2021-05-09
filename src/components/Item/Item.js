@@ -10,15 +10,15 @@ import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 
 class Item extends React.Component {
-    componentDidMount(){
-        console.log('componentDidMount');
-    }
-    componentDidUpdate(){
-        console.log('componentDidUpdate');
-    }
-    componentWillUnmount(){
-        console.log('componentWillUnmount');
-    }
+    
+        componentDidMount() {
+            this.timerID = setInterval(() => console.log('Я краду память'), 500);
+        }
+    
+        componentWillUnmount() {
+            clearInterval(this.timerID);
+        }
+   
     render() {
         const {value, isDone, id, onClickDone, onClickDelete} = this.props;
         return (<ListItem className={
