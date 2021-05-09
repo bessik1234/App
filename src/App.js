@@ -44,7 +44,29 @@ class App extends React.Component {
     
         this.setState({ items: newItemList });
       };
-    
+    onClickAdd = value => {
+		if ( value !== '') {
+
+			this.setState(state => ({
+				items: [
+					...state.items,
+					{
+						value,
+						isDone: false,
+						id: state.count + 1
+					}
+				],
+				count: state.count + 1,
+				hasError: false
+			}));
+	} else {
+		this.setState(state => ({
+			hasError: true
+		}))
+
+	}
+
+	};
 
 
     render() {
@@ -54,7 +76,10 @@ class App extends React.Component {
             <div className={styles.wrap}>
                 <div className={styles.main}>
                     <h1 className={styles.title}>Наш список дел:</h1>
-                    <InputItem/>
+                    <InputItem 
+                    onClickAdd={this.onClickAdd}
+					hasError={this.state.hasError}
+                    />
                     <ItemList items={this.state.items} 
                     onClickDone={this.onClickDone} 
                     onClickDelete={this.onClickDelete}  />
