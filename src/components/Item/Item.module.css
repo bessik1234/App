@@ -1,9 +1,9 @@
 .item {
-    color: tomato;
+    color: rgb(0, 0, 0);
 }
 
 .done {
-    color: #c4c4c4;
+    color: #928f8f;
 }
 
 .item{

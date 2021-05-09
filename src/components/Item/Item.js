@@ -9,11 +9,13 @@ import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 
 
-const Item = ({value, isDone, id , onClickDone}) => (
+const Item = ({value, isDone, id, onClickDone, onClickDelete}) => (
     <ListItem className={
         classnames({
             [styles.item]: true,
             [styles.done]: isDone,
+           
+
         })
     } >
         <Checkbox
@@ -24,7 +26,7 @@ const Item = ({value, isDone, id , onClickDone}) => (
         <ListItemText > {value}</ListItemText>
         <ListItemSecondaryAction className={styles.delete}>
             <IconButton aria-label="Comments">
-            <Button variant="contained">Del</Button>
+            <Button variant="contained" onClick={() => onClickDelete(id)}>Del</Button>
             </IconButton>
         </ListItemSecondaryAction>
     </ListItem>

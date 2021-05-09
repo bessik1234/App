@@ -3,13 +3,15 @@ import Item from "../Item/Item"
 import List from '@material-ui/core/List';
 
 
-const ItemList = ({items, onClickDone}) => (<List>
+const ItemList = ({items, onClickDone, onClickDelete}) => (<List>
             {items.map(item => <li key={item.value} >
                  <Item 
                     value={item.value} 
-                    isDone={item.isDone} 
+                    isDone={item.isDone}
                     id={item.id} 
-                    onClickDone={onClickDone} />
+                    onClickDone={onClickDone}
+                    onClickDelete={onClickDelete} 
+                    />
                     </li>)}           
         </List>);
 
