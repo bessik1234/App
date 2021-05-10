@@ -1,5 +1,6 @@
 .item{
-   text-decoration: none;
+  
+   list-style-type: none;
  }
 .wrap{
   margin-top: 80px;

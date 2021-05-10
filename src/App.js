@@ -1,8 +1,8 @@
 import React from "react";
 import styles from './App.module.css';
-import InputItem from "./Components/InputItem/InputItem";
-import ItemList from "./Components/ItemList/ItemList";
-import Footer from "./Components/Footer/Footer"; 
+import InputItem from "./сomponents/InputItem/InputItem";
+import ItemList from "./сomponents/ItemList/ItemList";
+import Footer from "./сomponents/Footer/Footer"; 
 
 class App extends React.Component {
     state = {
@@ -83,7 +83,7 @@ class App extends React.Component {
                     <ItemList items={this.state.items} 
                     onClickDone={this.onClickDone} 
                     onClickDelete={this.onClickDelete}  />
-                    <Footer  />
+                    <Footer count={this.state.count} />
                 </div>
             </div>);
     }
