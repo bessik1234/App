@@ -37,7 +37,7 @@ class Item extends React.Component {
             <ListItemText > {value}</ListItemText>
             <ListItemSecondaryAction className={styles.delete}>
                 <IconButton aria-label="Comments">
-                <Button variant="contained" onClick={() => onClickDelete(id)}>Del</Button>
+                <Button variant="contained" onClick={() => onClickDelete(id)} className={styles.span} >Del</Button>
                 </IconButton>
             </ListItemSecondaryAction>
         </ListItem>);
@@ -49,8 +49,9 @@ Item.defaultProps = {
 };
 Item.propTypes = {
 
-    count: PropTypes.bool
+    count: PropTypes.func
 };
+
 export default Item;
 
 
