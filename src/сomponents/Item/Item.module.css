@@ -1,0 +1,12 @@
+.item {
+    color: rgb(0, 0, 0);
+}
+
+.done {
+    color: #928f8f;
+}
+
+.item{
+   
+    list-style-type: none;
+ }
