@@ -1,0 +1,12 @@
+.link{
+    color: #000;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    
+}
+.wrap{
+    margin: 10px 0;
+}
+.foto{
+    border-radius:50% ;
+}
